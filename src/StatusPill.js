@@ -33,8 +33,6 @@ export function StatusPill({status}) {
             textColor = '#4A4A4A'
     }
 
-    
-
         return (
             <div className="status-pill" style={{background: pillBackgroundColor}}>
                 <div className="status-dot">

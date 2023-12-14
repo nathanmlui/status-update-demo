@@ -6,19 +6,19 @@ export default function ApiStep({stepTitle, stepLabel, stepValue, status, hasSta
   console.log(hasStarted)
   
   const [step, setStep] = useState(0)
-  const [hasAlreadyRun, setHasAlreadyRun] = useState(false)
+  const [hasCompleted, setHasCompleted] = useState(false)
 
   const stepProps = {
     stepTitle: stepTitle,
     stepLabel: stepLabel,
     stepValue: stepValue,
-    hasAlreadyRun: hasAlreadyRun,
+    hasCompleted: hasCompleted,
     setStep,
     setStepHasStarted,
-    setHasAlreadyRun,
+    setHasCompleted,
   }
 
-if (hasStarted && !hasAlreadyRun) {
+if (hasStarted && !hasCompleted) {
   switch (step) {
     case 0: 
       return <NotStarted {...stepProps}/>
@@ -36,7 +36,6 @@ if (hasStarted && !hasAlreadyRun) {
 
 else if (!hasStarted) return <NotStarted {...stepProps}/>
 else return <Complete {...stepProps}/>
-
 }
 
 
@@ -99,12 +98,12 @@ function InProgress({stepTitle, stepLabel, stepValue, setStep}) {
   )
 }
 
-function Complete({stepTitle, stepLabel, stepValue, setStepHasStarted, setHasAlreadyRun, hasAlreadyRun}) {
+function Complete({stepTitle, stepLabel, stepValue, setStepHasStarted, setHasCompleted, hasCompleted}) {
 
-  if (!hasAlreadyRun) {
+  if (!hasCompleted) {
     const timer = setTimeout(() => {
       setStepHasStarted([true, true])
-      setHasAlreadyRun(true)
+      setHasCompleted(true)
     }, 2000)
   }
 
