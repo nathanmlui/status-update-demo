@@ -11,3 +11,106 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  font-family: sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.api-step-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid 
+  rgb(240, 240, 240);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  padding: 24px 24px;
+  margin-bottom: 12px;
+  width: 400px;
+
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;;
+  }
+}
+
+.label-value-container {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+
+  white-space: nowrap;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  height: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-family: Menlo;
+
+  .status-dot {
+    display: flex;
+    width: 10px;
+    margin-right: 4px;
+  }
+
+  .status-text {
+    white-space: nowrap;
+  }
+}
+
+svg {
+  /* fill: #685858; */
+  width: 30px;
+
+  
+}
+
+/* circle {
+  fill: rgb(182, 52, 52);
+} */
+
+h1 {
+  font-size: 20px;
+  color: #2a2a2a
+  
+}
+
+
+.value {
+  font-size: 11px;
+  margin-left: 8px;
+  font-weight: 600;
+  color: #00671D;
+  background: #e4ffed;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+.blink {
+  background-color: yellow;
+  -webkit-animation: blink 1000ms step-end infinite;
+          animation: blink 1000ms step-end infinite;
+}
+@-webkit-keyframes blink { 50% { fill: #F5BF00; }}
+      @keyframes blink { 40% { fill: #F5BF00; }}
+
+
+.changing-dot {
+  width: 10px;
+  margin-right: 8px;;
+}
