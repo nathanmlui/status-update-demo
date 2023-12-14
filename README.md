@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+Quick demo of a way to display stepped progressions.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
